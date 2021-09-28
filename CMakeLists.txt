@@ -221,10 +221,6 @@ if(WIN32)
 endif()
 
 if(APPLE)
-  set_target_properties(openshot-audio PROPERTIES
-    INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib"
-    MACOSX_RPATH OFF
-  )
   target_link_libraries(openshot-audio PRIVATE
     "-framework Carbon"
     "-framework Cocoa"
